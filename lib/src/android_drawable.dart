@@ -1,10 +1,7 @@
-import 'dart:typed_data';
-import 'dart:ui';
-
+import 'package:drawable/src/drawable_type.dart';
 import 'package:drawable/src/drawables/adaptive_icon_drawable.dart';
 import 'package:drawable/src/drawables/bitmap_drawable.dart';
 import 'package:drawable/src/drawables/color_drawable.dart';
-import 'package:drawable/src/drawable_type.dart';
 import 'package:drawable/src/drawables/vector_drawable.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
@@ -71,7 +68,7 @@ class AndroidDrawable {
     final data =
         await _channel.invokeMethod<Map<dynamic, dynamic>>('adaptiveIcon', {
       _id: name,
-      _type: describeEnum(type),
+      _type: type,
       _scale: scale,
     });
     if (data == null) {
