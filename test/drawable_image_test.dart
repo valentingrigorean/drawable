@@ -1,4 +1,3 @@
-import 'dart:typed_data';
 
 import 'package:drawable/drawable.dart';
 import 'package:flutter/material.dart';
@@ -47,7 +46,7 @@ void main() {
 }
 
 class MyTestApp extends StatelessWidget {
-  const MyTestApp({Key? key, required this.child}) : super(key: key);
+  const MyTestApp({super.key, required this.child});
 
   final Widget child;
 

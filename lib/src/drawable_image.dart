@@ -29,7 +29,7 @@ class DrawableImage extends ImageProvider<DrawableImage> {
   }
 
   @override
-  ImageStreamCompleter load(DrawableImage key, ImageDecoderCallback decode) {
+  ImageStreamCompleter loadImage(DrawableImage key, ImageDecoderCallback decode) {
     return MultiFrameImageStreamCompleter(
       codec: _loadAsync(key, decode),
       scale: key.scale,
@@ -65,7 +65,7 @@ class DrawableImage extends ImageProvider<DrawableImage> {
   }
 
   @override
-  int get hashCode => hashValues(name, scale);
+  int get hashCode => Object.hash(name, scale);
 
   @override
   String toString() =>

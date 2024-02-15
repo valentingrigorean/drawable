@@ -1,8 +1,5 @@
-import 'dart:typed_data';
-import 'dart:ui';
 
 import 'package:drawable/drawable.dart';
-import 'package:drawable/src/drawable_type.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 
